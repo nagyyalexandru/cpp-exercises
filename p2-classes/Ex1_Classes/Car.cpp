@@ -3,27 +3,34 @@
 
 int Car::totalCount = 0;
 
-Car::Car()
+// ilustrating the Delegating Constructors for C++ 11
+Car::Car():Car(0)
 {
-    // std::cout << "-- Constructor call --" << std::endl;
-    ++totalCount;
-    fuel = 0;
-    speed = 0;
-    passengers = 0;
+    // constructor for 0 parameters
+    std::cout << "Constructor Car()" << std::endl;
+    // when this constr. is executed, it will jump to the next one
 }
 
-Car::Car(float amount)
+Car::Car(float amount):Car(amount, 0)
 {
+    std::cout << "Constructor Car(float amount)" << std::endl;
+    // after this constr. is executed, it will jump to the next one
+}
+
+Car::Car(float amount, int pass)
+{
+    // finally, this constr. is executed
+    std::cout << "Constructor Car(float amount, int pass)" << std::endl;
     ++totalCount;
     fuel = amount;
     speed = 0;
-    passengers = 0;
+    passengers = pass;
 }
 
 Car::~Car()
 {
     --totalCount;
-    // std::cout << "-- Deconstructor call --" << std::endl;
+    std::cout << "-- Deconstructor call --" << std::endl;
 }
 
 void Car::FillFuel(float amount)

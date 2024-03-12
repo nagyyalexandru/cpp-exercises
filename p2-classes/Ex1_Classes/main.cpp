@@ -2,19 +2,20 @@
 
 int main (void)
 {
-    Car::ShowCount();
+    Car car;
+    // Car::ShowCount();
     
-    Car car(4);
-    // car.FillFuel(6);
-    car.Accelerate();
-    car.Accelerate();
-    car.Accelerate();
-    car.Accelerate();
+    // Car car(4);
+    // // car.FillFuel(6);
+    // car.Accelerate();
+    // car.Accelerate();
+    // car.Accelerate();
+    // car.Accelerate();
 
-    car.AddPassengers(4);
+    // car.AddPassengers(4);
 
-    car.Dashboard();
+    // car.Dashboard();
 
-    Car::ShowCount();
+    // Car::ShowCount();
     return 0;
 }

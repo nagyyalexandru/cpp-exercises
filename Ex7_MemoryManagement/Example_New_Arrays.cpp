@@ -13,6 +13,7 @@ void NewArrays()
 
     delete []p;
 }
+
 int main(void)
 {
     NewArrays();

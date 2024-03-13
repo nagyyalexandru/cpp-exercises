@@ -11,6 +11,8 @@ public:
     Integer(int value);
     // copy constructor
     Integer(const Integer &obj);
+    // move constructor
+    Integer(Integer &&obj);
     int GetValue() const;
     void SetValue(int value);
     ~Integer();
@@ -26,4 +28,9 @@ public:
 
     // operator overload comparison operator '=='
     bool operator == (const Integer &obj)const;
+
+    // operator overload Assignment operator '='
+    Integer & operator = (const Integer &obj);
+
+    Integer & operator = (Integer &&obj);
 };

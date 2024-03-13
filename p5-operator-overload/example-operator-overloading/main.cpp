@@ -14,6 +14,7 @@ std::ostream & operator <<(std::ostream & out, const Integer &a)
     return out;
 }
 
+// operator for reading with 'std::cin'
 std::istream & operator >> (std::istream &input, Integer &a)
 {
     int aux;
@@ -59,7 +60,7 @@ int main(void)
     // std::cout << sum1 << std::endl;     // this expression will not work unless we implement the ostream operator '<<'
     std::cout << sum1 << std::endl;
 
-    std::cin >> a;
-    std::cout << a << std::endl;
+    // std::cin >> a;
+    // std::cout << a << std::endl;
     return 0;
 }

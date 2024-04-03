@@ -23,6 +23,7 @@ public:
 int main(void)
 {
     // Example using Shared Pointer
+    // Shared pointers allow multiple pointers to point to the same object
     std::shared_ptr<Foo> sharedFoo = std::make_shared<Foo>();
 
     std::cout << "Shared pointer count: " << sharedFoo.use_count() << std::endl;
@@ -33,6 +34,7 @@ int main(void)
     std::cout << "Shared pointer count: " << sharedFoo.use_count() << std::endl;
 
     // Example using Unique Pointer
+    // Unique pointers enforce exclusive ownership, meaning only one pointer can point to a particular object
     std::unique_ptr<Foo> uniqueFoo = std::make_unique<Foo>();
     uniqueFoo->msg();   // Accessing member function
 
